@@ -18,3 +18,13 @@ services:
       retries: 3
     networks:
       default:
+
+  app:
+    image: ilhamfadhilah/drone-s3-uploader:v1.0.0
+    build:
+      context: .
+      dockerfile: dockerfile
+      target: final
+    env_file:
+      - .env
+    entrypoint: ["tail", "-f", "/dev/null"]

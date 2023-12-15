@@ -5,8 +5,8 @@ conf = config()
 
 
 def define_secure():
-    endpoint = conf['endpoint']
-    return 'https://' in endpoint
+    secure = conf['secure']
+    return secure in ['true', 'True']
 
 
 client = Minio(

@@ -13,13 +13,14 @@ steps:
     image: ilhamfadhilah/drone-s3-uploader:v1.0.0
     settings:
       endpoint:
-        from_secret: endpoint
+        from_secret: endpoint # is3.idcloudhost.id => do not using port or protocol string
       access_key:
         from_secret: access_key
       secret_key:
         from_secret: secret_key
       bucket:
         from_secret: bucket
+      secure: true
       target:
       source:
   # ...

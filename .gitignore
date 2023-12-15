@@ -4,3 +4,4 @@ venv
 volumes
 dist
 build
+main.spec

@@ -11,7 +11,6 @@ class S3Upload:
 
     def upload(self):
         try:
-            print(conf)
             bucket = conf['bucket']
             target = conf['target']
             source = conf['source']
